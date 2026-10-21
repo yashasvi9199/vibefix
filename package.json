@@ -1,0 +1,32 @@
+{
+  "name": "vibefix",
+  "version": "1.0.0",
+  "description": "Stealth architecture rules and agent workflows for Antigravity IDE",
+  "license": "MIT",
+  "author": "yashasvi9199",
+  "type": "module",
+  "bin": {
+    "vibefix": "./dist/bin/cli.js"
+  },
+  "files": [
+    "dist",
+    "templates"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx bin/cli.ts",
+    "prepack": "pnpm run build"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.0.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  }
+}
