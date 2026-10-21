@@ -14,8 +14,7 @@
   ],
   "scripts": {
     "build": "tsc",
-    "dev": "tsx bin/cli.ts",
-    "prepack": "pnpm run build"
+    "dev": "tsx bin/cli.ts"
   },
   "dependencies": {
     "chalk": "^5.3.0",
