@@ -157,19 +157,19 @@ your-project/
 │   └── CHECKLIST.md              # Feature debt tracking, pre-commit & pre-deployment verification
 └── .agent/
     └── workflows/                # Native Antigravity IDE slash commands
-        ├── task-sync.md          # /task-sync
-        ├── audit-security.md     # /audit-security
-        ├── harden-headers.md     # /harden-headers
-        ├── audit-seo.md          # /audit-seo
-        ├── open-graph.md         # /open-graph
-        ├── gen-sitemap.md        # /gen-sitemap
-        ├── setup-telemetry.md    # /setup-telemetry
-        ├── dpdp-scaffold.md      # /dpdp-scaffold
-        ├── dpdp-cookies.md       # /dpdp-cookies
-        ├── dpdp-audit.md         # /dpdp-audit
-        ├── gen-errors.md         # /gen-errors
-        ├── setup-pwa.md          # /setup-pwa
-        └── gen-conversion.md     # /gen-conversion
+        ├── vibe-task-sync.md          # /vibe-task-sync
+        ├── vibe-audit-security.md     # /vibe-audit-security
+        ├── vibe-harden-headers.md     # /vibe-harden-headers
+        ├── vibe-audit-seo.md          # /vibe-audit-seo
+        ├── vibe-open-graph.md         # /vibe-open-graph
+        ├── vibe-gen-sitemap.md        # /vibe-gen-sitemap
+        ├── vibe-setup-telemetry.md    # /vibe-setup-telemetry
+        ├── vibe-dpdp-scaffold.md      # /vibe-dpdp-scaffold
+        ├── vibe-dpdp-cookies.md       # /vibe-dpdp-cookies
+        ├── vibe-dpdp-audit.md         # /vibe-dpdp-audit
+        ├── vibe-gen-errors.md         # /vibe-gen-errors
+        ├── vibe-setup-pwa.md          # /vibe-setup-pwa
+        └── vibe-gen-conversion.md     # /vibe-gen-conversion
 ```
 
 ---
@@ -184,19 +184,19 @@ Open the **Google Antigravity IDE** chat panel and type `/`. The following slash
 
 | Slash Command | Category | Action Description |
 |:---|:---|:---|
-| **`/task-sync`** | `Docs & Debt` | Scans codebase against `rules/`, populates `.pending-tasks/checklist.md`, and updates debt. |
-| **`/audit-security`** | `Security` | Audits dependencies (`pnpm audit`), validates `.env` secrecy, and checks for secret leaks. |
-| **`/harden-headers`** | `Security` | Scaffolds and audits strict Content Security Policy (CSP), HSTS, and dynamic CORS headers. |
-| **`/audit-seo`** | `SEO & CWV` | Inspects semantic HTML, page titles, meta descriptions, canonical tags, and alt attributes. |
-| **`/open-graph`** | `Assets` | Generates Open Graph social preview cards (1200x630) and complete favicon suites. |
-| **`/gen-sitemap`** | `SEO` | Crawls active route trees and outputs compliant `sitemap.xml` and `robots.txt`. |
-| **`/setup-telemetry`** | `Analytics` | Scaffolds type-safe event taxonomies, SPA route listeners, and privacy-consent gates. |
-| **`/dpdp-scaffold`** | `Compliance` | Scaffolds Privacy Policy, Terms, and Grievance Redressal forms with data deletion actions. |
-| **`/dpdp-cookies`** | `Compliance` | Injects an interactive cookie banner tied to `localStorage` and telemetry gates. |
-| **`/dpdp-audit`** | `Compliance` | Audits form inputs to verify mandatory unticked DPDP consent checkboxes. |
-| **`/gen-errors`** | `Frontend` | Scaffolds dedicated fallback views for 404, 500 error boundaries, redirects, and downtime. |
-| **`/setup-pwa`** | `Frontend` | Sets up offline-first Service Worker, Web App Manifest, and Cache Storage. |
-| **`/gen-conversion`** | `Frontend` | Generates post-conversion Thank You page with transactional metadata and analytics triggers. |
+| **`/vibe-task-sync`** | `Docs & Debt` | Scans codebase against `rules/`, populates `.pending-tasks/checklist.md`, and updates debt. |
+| **`/vibe-audit-security`** | `Security` | Audits dependencies (`pnpm audit`), validates `.env` secrecy, and checks for secret leaks. |
+| **`/vibe-harden-headers`** | `Security` | Scaffolds and audits strict Content Security Policy (CSP), HSTS, and dynamic CORS headers. |
+| **`/vibe-audit-seo`** | `SEO & CWV` | Inspects semantic HTML, page titles, meta descriptions, canonical tags, and alt attributes. |
+| **`/vibe-open-graph`** | `Assets` | Generates Open Graph social preview cards (1200x630) and complete favicon suites. |
+| **`/vibe-gen-sitemap`** | `SEO` | Crawls active route trees and outputs compliant `sitemap.xml` and `robots.txt`. |
+| **`/vibe-setup-telemetry`** | `Analytics` | Scaffolds type-safe event taxonomies, SPA route listeners, and privacy-consent gates. |
+| **`/vibe-dpdp-scaffold`** | `Compliance` | Scaffolds Privacy Policy, Terms, and Grievance Redressal forms with data deletion actions. |
+| **`/vibe-dpdp-cookies`** | `Compliance` | Injects an interactive cookie banner tied to `localStorage` and telemetry gates. |
+| **`/vibe-dpdp-audit`** | `Compliance` | Audits form inputs to verify mandatory unticked DPDP consent checkboxes. |
+| **`/vibe-gen-errors`** | `Frontend` | Scaffolds dedicated fallback views for 404, 500 error boundaries, redirects, and downtime. |
+| **`/vibe-setup-pwa`** | `Frontend` | Sets up offline-first Service Worker, Web App Manifest, and Cache Storage. |
+| **`/vibe-gen-conversion`** | `Frontend` | Generates post-conversion Thank You page with transactional metadata and analytics triggers. |
 
 > [!TIP]
 > Each workflow file in `.agent/workflows/` is fully customizable. You can adjust the steps to suit your organization's specific tech stack or continuous integration gates.
