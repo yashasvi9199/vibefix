@@ -21,7 +21,7 @@ Operate as an elite senior developer in an Arch Linux environment. Output produc
 <modular_rule_routing>
 Reference and load domain-specific rules on demand:
 * When building or modifying REST endpoints: Adhere to `@rules/API.md`
-* When handling authentication, inputs, uploads, or DB queries: Adhere to `@rules/SECURITY.md` (Trigger `/audit-security` or `/harden-headers` for audit and security scaffolding)
+* When handling authentication, inputs, uploads, or DB queries: Adhere to `@rules/SECURITY.md` (Trigger `/vibe-audit-security` or `/vibe-harden-headers` for audit and security scaffolding)
 * When styling, handling viewports, animations, or state: Adhere to `@rules/FRONTEND.md`
 * When configuring metadata, structured data, or crawl files: Adhere to `@rules/SEO.md`
 * When implementing legal routes, cookie banners, or intake forms: Adhere to `@rules/COMPLIANCE.md`
