@@ -20,5 +20,5 @@
 9. **Cryptographic Entropy:** Prohibit `Math.random()` for any security context. Always utilize the Web Crypto API (`crypto.getRandomValues`, `crypto.randomUUID`) or platform-native cryptographic libraries.
 
 ## Actionable Security Workflows
-- **Dependency & Secret Leak Auditing:** Trigger `/audit-security` to run `pnpm audit` and verify `.env` secrecy.
-- **HTTP Header Hardening:** Trigger `/harden-headers` to configure CSP, HSTS, frame options, and dynamic CORS middleware.
+- **Dependency & Secret Leak Auditing:** Trigger `/vibe-audit-security` to run `pnpm audit` and verify `.env` secrecy.
+- **HTTP Header Hardening:** Trigger `/vibe-harden-headers` to configure CSP, HSTS, frame options, and dynamic CORS middleware.
