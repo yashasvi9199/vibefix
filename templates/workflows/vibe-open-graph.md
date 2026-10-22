@@ -5,7 +5,7 @@ description: Generate optimized Open Graph preview assets (1200x630), favicons, 
 # Open Graph & Asset Generation Task
 
 1. **Context Ingestion:**
-   - Inspect user arguments passed to the command (e.g., `/open-graph generate images based on README and UI`).
+   - Inspect user arguments passed to the command (e.g., `/vibe-open-graph generate images based on README and UI`).
    - If no arguments are provided, read `README.md`, `package.json`, and the main landing page UI to determine app theme, brand name, primary colors, and tagline.
 
 2. **Asset Generation:**
