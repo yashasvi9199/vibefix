@@ -22,7 +22,7 @@ description: Scan codebase against rules/ and specs, initialize .pending-tasks/,
      - Routes missing meta titles, descriptions, or canonical tags
      - Unused or loose `any` types in `.types.ts`
      - Pending OpenSpec changes (`openspec/changes/`)
-     - Pending security checks: unhardened headers (run `/harden-headers`) or unverified dependencies (run `/audit-security`)
+     - Pending security checks: unhardened headers (run `/vibe-harden-headers`) or unverified dependencies (run `/vibe-audit-security`)
 
 3. **Update `.pending-tasks/checklist.md`:**
    - Append newly identified gaps under appropriate category headers.
