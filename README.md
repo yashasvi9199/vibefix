@@ -1,237 +1,143 @@
-<p align="center">
-  <img src="./assets/banner.png" alt="VibeFix Banner" width="100%" />
-</p>
+# **VibeFix (`vibefix`)**
 
-<h1 align="center">VibeFix</h1>
+## **Stealth AI Architecture & Command Scaffolder for Antigravity IDE**
 
-<p align="center">
-  <strong>Stealth architecture rules, zero-trust security standards, and agent workflows for Antigravity IDE.</strong>
-</p>
+VibeFix turns conversational, unstructured "vibe-coding" into production-grade, deterministic architecture. It bootstraps a complete stealth developer configuration into your project with zero token bloat, ensuring AI agents code like meticulous senior engineers without leaving generic AI fingerprints, boilerplate comments, or loose types.
 
-<p align="center">
-  <a href="https://github.com/yashasvi9199/vibefix/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" alt="MIT License" /></a>
-  <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-5.0+-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" /></a>
-  <a href="https://pnpm.io/"><img src="https://img.shields.io/badge/pnpm-ready-F69220?style=flat-square&logo=pnpm&logoColor=white" alt="pnpm" /></a>
-  <a href="https://github.com/yashasvi9199/vibefix/stargazers"><img src="https://img.shields.io/github/stars/yashasvi9199/vibefix?style=flat-square" alt="GitHub Stars" /></a>
-  <a href="https://github.com/yashasvi9199/vibefix/issues"><img src="https://img.shields.io/github/issues/yashasvi9199/vibefix?style=flat-square" alt="Open Issues" /></a>
-</p>
+# **What VibeFix Does**
 
----
+Running vibefix init in any workspace installs a modular, three-tier architecture:
 
-## ⚡ Overview
+* **`GEMINI.md` (Ambient Persona & Router):** A hyper-optimized system prompt that sets strict coding invariants and routes domain tasks on demand rather than overloading prompt tokens on every turn.  
+* **`rules/` (Modular Domain Rules):** 8 isolated markdown rule books covering Core Engineering, APIs, Security, Frontend, SEO, DPDP Compliance, Feature Checklists, and Documentation Ledgers.  
+* **`.agent/workflows/` (Native Slash Commands):** 13 native Antigravity IDE slash commands populated directly in the agent's autocomplete popup (`/`) with linear descriptions.
 
-**VibeFix** automates the injection of battle-tested software engineering standards, security guardrails, and AI agent slash commands into any codebase. Designed natively for **Google Antigravity IDE**, it bridges the gap between autonomous AI coding agents and hardened, production-grade architecture.
+# **Installation & Quickstart**
 
-With a single command, VibeFix scaffolds modular system prompts, DPDP compliance standards, zero-trust validation rules, and executable `.agent/workflows/` that turn your IDE assistant into an elite senior staff engineer.
+## **Method 1: Run Remotely (Recommended)**
 
----
+Run directly inside any existing or newly created project directory:\# Using pnpm (strictly enforced)
 
-## 🚀 Quick Start (Zero Install)
+pnpm dlx @yashasvi9199/vibefix init
 
-Run VibeFix directly in your project root using your package manager of choice:
+\# Or using npx
 
-### **pnpm** (Recommended)
-```bash
-# Run directly via GitHub repository
-pnpm dlx github:yashasvi9199/vibefix init
+npx @yashasvi9199/vibefix init
 
-# Or via npm package registry
-pnpm dlx vibefix init
-```
+## **Method 2: Global Installation**
 
-### **npm / npx**
-```bash
-# Run directly via GitHub repository
-npx github:yashasvi9199/vibefix init
+Install globally on your machine to use `vibefix` anywhere:pnpm add \-g @yashasvi9199/vibefix
 
-# Or via npm package registry
-npx vibefix init
-```
+vibefix init
 
-### **bun**
-```bash
-# Run directly via GitHub repository
-bunx --bun github:yashasvi9199/vibefix init
+## **Method 3: Local Development & Linking**
 
-# Or via npm package registry
-bunx vibefix init
-```
+If you are developing or customizing `vibefix` locally:h  
+pnpm install  
+pnpm run build  
+pnpm add \-g .
 
-### **yarn**
-```bash
-# Run directly via GitHub repository
-yarn dlx github:yashasvi9199/vibefix init
+\#\# Scaffolding Structure
 
-# Or via npm package registry
-yarn dlx vibefix init
-```
+When initialized, VibeFix creates the following layout in the target project root:
 
----
+\`\`\`text
 
-## 📦 Global Installation
-
-Install VibeFix globally to use the `vibefix` command anywhere across your system:
-
-| Package Manager | Global Install Command | Project Init Command |
-|---|---|---|
-| **pnpm** | `pnpm add -g github:yashasvi9199/vibefix` | `vibefix init` |
-| **npm** | `npm install -g github:yashasvi9199/vibefix` | `vibefix init` |
-| **bun** | `bun add -g github:yashasvi9199/vibefix` | `vibefix init` |
-| **yarn** | `yarn global add github:yashasvi9199/vibefix` | `vibefix init` |
-
-> [!TIP]
-> Once installed globally, navigate to any workspace and run `vibefix init`.
-
----
-
-## 🛠️ Project Dev Dependency Installation
-
-If you prefer pinning VibeFix inside your repository's `package.json`:
-
-### 1. Install as dev dependency
-```bash
-# pnpm
-pnpm add -D github:yashasvi9199/vibefix
-
-# npm
-npm install -D github:yashasvi9199/vibefix
-
-# bun
-bun add -d github:yashasvi9199/vibefix
-
-# yarn
-yarn add -D github:yashasvi9199/vibefix
-```
-
-### 2. Run initialization
-```bash
-pnpm vibefix init
-# or: npx vibefix init / bunx vibefix init / yarn vibefix init
-```
-
----
-
-## 💻 CLI Usage & Flags
-
-```
-Usage: vibefix [options] [command]
-
-Scaffold rules, GEMINI.md, and Antigravity slash commands
-
-Options:
-  -V, --version   output the version number
-  -h, --help      display help for command
-
-Commands:
-  init [options]  Scaffold rules/, .agent/workflows/, and GEMINI.md into project
-  help [command]  display help for command
-```
-
-### Command Options: `vibefix init`
-
-| Option | Shorthand | Description | Default |
-|---|---|---|---|
-| `--force` | `-f` | Overwrite existing files if they already exist in destination | `false` |
-| `--help` | `-h` | Display help for the `init` command | - |
-
-```bash
-# Force overwrite existing configs
-vibefix init --force
-```
-
----
-
-## 🏗️ What VibeFix Scaffolds
-
-Running `vibefix init` provisions three mission-critical subsystems in your repository:
-
-```
 your-project/
-├── GEMINI.md                     # Agent routing prompt & behavioral enforcement
-├── rules/                        # Modular architectural directives
-│   ├── CORE.md                   # Strict TypeScript, zero 'any', pnpm standards
-│   ├── API.md                    # REST, gRPC, SSE, Webhooks, idempotency & rate limits
-│   ├── SECURITY.md               # Zero-trust validation, Zod schemas, UUIDs, ReDoS/SSTI defense
-│   ├── FRONTEND.md               # SSR, Tailwind, Zustand, TanStack Query, Offline-first PWA
-│   ├── SEO.md                    # Canonical meta titles, dynamic Open Graph, sitemaps
-│   ├── COMPLIANCE.md             # India DPDP Act 2023, consent checkboxes & privacy policies
-│   ├── DOCS.md                   # Ephemeral staging docs, CHANGELOG, and DATABASE.sql ledgers
-│   └── CHECKLIST.md              # Pre-commit & pre-deployment verification matrix
+
+├── GEMINI.md                     \# Ambient agent persona & on-demand rule router
+
+├── rules/                        \# Modular domain-specific rule books
+
+│   ├── CORE.md                   \# Strict TS, pnpm mandate, async safety, commits
+
+│   ├── API.md                    \# REST invariants, HTTP verbs, rate limiting
+
+│   ├── SECURITY.md               \# Zero-trust schemas, SQLi/NoSQL defense, upload safety
+
+│   ├── FRONTEND.md               \# SSR, Tailwind, co-located styles/types, PWA, mobile UI
+
+│   ├── SEO.md                    \# Metadata, Open Graph, sitemap, robots, image alt text
+
+│   ├── COMPLIANCE.md             \# DPDP Act, privacy notices, consent checkboxes
+
+│   ├── CHECKLIST.md              \# Feature debt tracking and task states
+
+│   └── DOCS.md                   \# SemVer CHANGELOG, GUIDE, immutable DATABASE.sql
+
 └── .agent/
-    └── workflows/                # Interactive slash commands for Antigravity IDE
-        ├── /audit-security       # Full zero-trust vulnerability & data exposure scan
-        ├── /audit-seo            # Meta tags, crawler indexability & Open Graph audit
-        ├── /dpdp-audit           # Verify statutory compliance with DPDP Act 2023
-        ├── /dpdp-cookies         # Scaffold GDPR/DPDP compliant consent banners
-        ├── /dpdp-scaffold        # Generate compliant Privacy Policy and Terms & Conditions
-        ├── /gen-conversion       # Scaffold high-conversion 'Thank You' post-purchase flows
-        ├── /gen-errors           # Generate standardized custom 404, 500 & maintenance views
-        ├── /gen-sitemap          # Auto-generate dynamic sitemap.xml and robots.txt
-        ├── /harden-headers       # Inject CSP, HSTS, X-Frame-Options, and CORS controls
-        ├── /open-graph           # Scaffold dynamic edge-rendered social preview cards
-        ├── /setup-pwa            # Generate offline-first service worker & web manifest
-        ├── /setup-telemetry      # Setup privacy-respecting client analytics
-        └── /task-sync            # Sync task completion to RELEASE.md & CHANGELOG.md
-```
 
----
+    └── workflows/                \# Native Antigravity IDE slash commands
 
-## 🎯 Architectural Philosophy
+        ├── task-sync.md          \# /task-sync
 
-VibeFix enforces strict, production-first development rules:
+        ├── audit-security.md     \# /audit-security
 
-- **Strict Typing**: Ban on `any`, isolated `.types.ts` per feature domain, and strict compiler boundaries.
-- **Deterministic Tooling**: Standardized on `pnpm` exclusively; eliminates phantom dependencies and lockfile drift.
-- **Zero-Trust Input Validation**: Mandates Zod schemas, parameterized ORMs (Drizzle / Prisma), and UUID primary keys.
-- **Modern Edge & Frontend**: SSR architectures, TanStack Query / Zustand separation, and mobile breakpoint parity.
-- **Regulatory Compliance**: Built-in compliance mechanisms for modern data protection acts (DPDP 2023, GDPR).
+        ├── harden-headers.md     \# /harden-headers
 
----
+        ├── audit-seo.md          \# /audit-seo
 
-## 🤖 Using with Antigravity IDE
+        ├── open-graph.md         \# /open-graph
 
-1. Run `vibefix init` in your project root.
-2. Open the project in **Google Antigravity IDE**.
-3. Open the chat panel and type `/` to see all injected agent workflows:
+        ├── gen-sitemap.md        \# /gen-sitemap
 
-```
-/audit-security   - Run security audit
-/setup-pwa        - Scaffold offline-first PWA
-/harden-headers   - Configure security headers
-/task-sync        - Update staging docs & changelog
-```
+        ├── setup-telemetry.md    \# /setup-telemetry
 
-Your AI assistant will immediately adhere to all guidelines defined in `GEMINI.md` and `rules/`.
+        ├── dpdp-scaffold.md      \# /dpdp-scaffold
 
----
+        ├── dpdp-cookies.md       \# /dpdp-cookies
 
-## 🛠️ Local Development & Contribution
+        ├── dpdp-audit.md         \# /dpdp-audit
 
-Want to contribute new rules or workflows to VibeFix?
+        ├── gen-errors.md         \# /gen-errors
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/yashasvi9199/vibefix.git
-cd vibefix
+        ├── setup-pwa.md          \# /setup-pwa
 
-# 2. Install dependencies
+        └── gen-conversion.md     \# /gen-conversion
+
+# **Native Slash Commands (`/`)**
+
+Open the Antigravity Agent chat panel and type `/`. The following commands will appear in your autocomplete menu with their descriptions:
+
+| Command | Action Description |
+| :---- | :---- |
+| **`/task-sync`** | Scans codebase against `rules/`, populates `.pending-tasks/checklist.md`, and updates debt. |
+| **`/audit-security`** | Audits dependencies (`pnpm audit`), validates `.env` secrecy, and checks for secret leaks. |
+| **`/harden-headers`** | Scaffolds and audits strict Content Security Policy (CSP), HSTS, and dynamic CORS headers. |
+| **`/audit-seo`** | Inspects semantic HTML, page titles, meta descriptions, canonical tags, and alt attributes. |
+| **`/open-graph`** | Generates Open Graph social cards (1200x630) and complete cross-platform favicon suites. |
+| **`/gen-sitemap`** | Crawls active route trees and outputs compliant `sitemap.xml` and `robots.txt`. |
+| **`/setup-telemetry`** | Scaffolds type-safe event taxonomies, SPA route listeners, and privacy-consent gates. |
+| **`/dpdp-scaffold`** | Scaffolds Privacy Policy, Terms, and Grievance Redressal forms with data deletion actions. |
+| **`/dpdp-cookies`** | Injects an interactive cookie banner tied to `localStorage` and telemetry gates. |
+| **`/dpdp-audit`** | Audits form inputs to verify mandatory unticked DPDP consent checkboxes. |
+| **`/gen-errors`** | Scaffolds dedicated fallback views for 404, 500 error boundaries, redirects, and downtime. |
+| **`/setup-pwa`** | Sets up offline-first Service Worker, Web App Manifest, and Cache Storage. |
+| **`/gen-conversion`** | Generates post-conversion Thank You page with transactional metadata and analytics triggers. |
+
+# **Core Engineering Invariants**
+
+* **Zero AI Fingerprints:** Bans hand-holding inline comments, conversational fluff, and redundant explanations.  
+* **Strict Typing:** Absolute ban on the `any` datatype. Every feature encapsulates its own `.types.ts`.  
+* **Isolated Styles:** Monolithic global CSS is banned; each component module maintains isolated `.styles.css`.  
+* **Strict pnpm Standard:** `npm` and `yarn` are strictly banned in target workspaces to prevent phantom dependencies.  
+* **Defensive Async Operations:** All asynchronous logic must be wrapped in structured `try/catch` handlers.  
+* **Micro-Commits:** Granular, semantic Git micro-commits (`feat:`, `fix:`, `chore:`, `refactor:`) authored under `yashasvi9199`.
+
+# **CLI Development**
+
+\# Install dependencies
+
 pnpm install
 
-# 3. Build TypeScript source
+\# Run locally in development
+
+pnpm run dev init
+
+\# Build TypeScript to dist/
+
 pnpm run build
 
-# 4. Test CLI locally
-pnpm run dev init
-```
+# **License**
 
----
-
-## 📄 License
-
-Distributed under the **MIT License**. See [LICENSE](file:///home/drone/Programming/vibefix/LICENSE) for more information.
-
----
-
-<p align="center">
-  Crafted by <a href="https://github.com/yashasvi9199"><strong>Yash Haldiya</strong></a>
-</p>
+This project is licensed under the MIT License \- open-source and free for all developers.
