@@ -1,4 +1,5 @@
 import fs from "fs/promises";
+import { existsSync } from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import chalk from "chalk";
@@ -7,8 +8,15 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Resolves to package root whether running locally or inside node_modules
-const PACKAGE_ROOT = path.resolve(__dirname, "../../");
-const TEMPLATES_DIR = path.join(PACKAGE_ROOT, "templates");
+function getTemplatesDir(): string {
+  const rootTemplates = path.resolve(__dirname, "../../../templates");
+  if (existsSync(rootTemplates)) {
+    return rootTemplates;
+  }
+  return path.resolve(__dirname, "../../templates");
+}
+
+const TEMPLATES_DIR = getTemplatesDir();
 
 async function copyFolder(src: string, dest: string, force: boolean) {
   await fs.mkdir(dest, { recursive: true });
