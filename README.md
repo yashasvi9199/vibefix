@@ -28,7 +28,7 @@
 
 ---
 
-## ⚡ Overview
+## Overview
 
 [![Pattern](https://img.shields.io/badge/Pattern-Three--Tier_Architecture-6366f1?style=flat-square&labelColor=0f172a)](#)
 [![Context](https://img.shields.io/badge/Context-On--Demand_Routing-8b5cf6?style=flat-square&labelColor=0f172a)](#)
@@ -45,7 +45,7 @@ Instead of polluting system prompts with massive monolithic instructions on ever
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 [![Setup](https://img.shields.io/badge/Setup-Zero_Config-10b981?style=flat-square&labelColor=0f172a)](#)
 [![Engine](https://img.shields.io/badge/Engine-Instant_dlx-f59e0b?style=flat-square&labelColor=0f172a&logo=pnpm)](#)
@@ -97,11 +97,9 @@ pnpm vibefix init
 
 ---
 
-## 💻 CLI Usage & Options
+## CLI Usage & Options
 
 [![CLI](https://img.shields.io/badge/CLI-vibefix_init-6366f1?style=flat-square&labelColor=0f172a)](#)
-[![Flag](https://img.shields.io/badge/Flag---force_%7C_-f-f43f5e?style=flat-square&labelColor=0f172a)](#)
-[![Help](https://img.shields.io/badge/Docs---help_%7C_-h-38bdf8?style=flat-square&labelColor=0f172a)](#)
 
 ```bash
 vibefix [command] [options]
@@ -137,7 +135,7 @@ vibefix --version
 
 ---
 
-## 🏗️ Scaffolding Architecture
+## Scaffolding Architecture
 
 [![Structure](https://img.shields.io/badge/Scaffold-Antigravity_Native-8b5cf6?style=flat-square&labelColor=0f172a)](#)
 [![Compliance](https://img.shields.io/badge/Compliance-DPDP_Act_2023-f59e0b?style=flat-square&labelColor=0f172a)](#)
@@ -176,7 +174,7 @@ your-project/
 
 ---
 
-## ⚡ Native Slash Commands (`/`)
+## Native Slash Commands (`/`)
 
 [![Trigger](https://img.shields.io/badge/Trigger-Type_%2F_in_Chat-4285F4?style=flat-square&labelColor=0f172a&logo=google)](#)
 [![Catalog](https://img.shields.io/badge/Catalog-13_Production_Workflows-ec4899?style=flat-square&labelColor=0f172a)](#)
@@ -205,7 +203,7 @@ Open the **Google Antigravity IDE** chat panel and type `/`. The following slash
 
 ---
 
-## 🛡️ Core Engineering Invariants
+## Core Engineering Invariants
 
 [![Typing](https://img.shields.io/badge/Type_System-Strict_No_Any-3178C6?style=flat-square&labelColor=0f172a&logo=typescript)](#)
 [![Validation](https://img.shields.io/badge/Validation-Zero--Trust_Zod-10b981?style=flat-square&labelColor=0f172a)](#)
@@ -214,17 +212,17 @@ Open the **Google Antigravity IDE** chat panel and type `/`. The following slash
 
 VibeFix establishes unwavering invariants that prevent common AI failure modes:
 
-* 🚫 **Zero AI Fingerprints:** Bans hand-holding inline comments, conversational fluff, and redundant preamble. Code is written directly at senior-staff grade.
-* 🔒 **Strict TypeScript Types:** Absolute ban on the `any` datatype. Every feature domain encapsulates its own dedicated `.types.ts` file; central monolithic `global.d.ts` is prohibited.
-* 📦 **Strict pnpm Standard:** `npm` and `yarn` are strictly banned in target workspaces to eliminate phantom dependencies and lockfile drift.
-* 🎨 **Co-located Isolated Styles:** Monolithic global stylesheets are prohibited. Feature components must maintain isolated `.styles.css` modules.
-* 🛡️ **Defensive Async Operations:** All asynchronous operations must be wrapped in structured `try/catch` handlers with actionable errors.
-* ⚖️ **Zero-Trust Input Validation:** Zod schemas are enforced on every boundary. UUID primary keys are mandated; raw sequential database IDs are never exposed.
-* 🌿 **Atomic Micro-Commits:** Granular, semantic Git commits (`feat:`, `fix:`, `chore:`, `refactor:`, `docs:`) executed immediately upon code verification.
+* **Zero AI Fingerprints:** Bans hand-holding inline comments, conversational fluff, and redundant preamble. Code is written directly at senior-staff grade.
+* **Strict TypeScript Types:** Absolute ban on the `any` datatype. Every feature domain encapsulates its own dedicated `.types.ts` file; central monolithic `global.d.ts` is prohibited.
+* **Strict pnpm Standard:** `npm` and `yarn` are strictly banned in target workspaces to eliminate phantom dependencies and lockfile drift.
+* **Co-located Isolated Styles:** Monolithic global stylesheets are prohibited. Feature components must maintain isolated `.styles.css` modules.
+* **Defensive Async Operations:** All asynchronous operations must be wrapped in structured `try/catch` handlers with actionable errors.
+* **Zero-Trust Input Validation:** Zod schemas are enforced on every boundary. UUID primary keys are mandated; raw sequential database IDs are never exposed.
+* **Atomic Micro-Commits:** Granular, semantic Git commits (`feat:`, `fix:`, `chore:`, `refactor:`, `docs:`) executed immediately upon code verification.
 
 ---
 
-## 🛠️ Local Development
+## Local Development
 
 [![Node](https://img.shields.io/badge/Node->=_20.0.0-339933?style=flat-square&labelColor=0f172a&logo=node.js)](#)
 [![Build](https://img.shields.io/badge/Build-pnpm_run_build-f59e0b?style=flat-square&labelColor=0f172a&logo=pnpm)](#)
@@ -250,12 +248,8 @@ node dist/bin/cli.js init
 
 ---
 
-## 📄 License
+## License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-38bdf8?style=flat-square&labelColor=0f172a)](LICENSE)
 
 Distributed under the **MIT License**. See [LICENSE](file:///home/drone/Programming/vibefix/LICENSE) for more information.
-
-<p align="center">
-  Crafted with precision by <a href="https://github.com/yashasvi9199"><strong>Yash Haldiya</strong></a>
-</p>
